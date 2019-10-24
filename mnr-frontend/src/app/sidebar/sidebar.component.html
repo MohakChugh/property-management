@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+    <div class="container-fluid d-flex flex-column p-0">
+        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <div class="sidebar-brand-icon rotate-n-15"></div>
+            <div class="sidebar-brand-text mx-3"><span>MNR CONSULTANTS</span></div>
+        </a>
+        <hr class="sidebar-divider my-0">
+        <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/tables']" routerLinkActive="router-link-active"><i class="fas fa-table" style="font-size: 24px;"></i><span style="font-size: 16px;">Properties</span></a><a class="nav-link" [routerLink]="['/addproperty']" routerLinkActive="router-link-active" style="font-size: 24px;"><i class="fas fa-building" style="font-size: 24px;"></i><span style="font-size: 16px;">Add Property</span></a>
+                <a
+                    class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active"><i class="fas fa-tachometer-alt" style="font-size: 24px;"></i><span style="font-size: 16px;">Dashboard</span></a>
+            </li>
+            <!-- <li class="nav-item" role="presentation"></li>
+            <li class="nav-item" role="presentation"></li> -->
+            <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/addclient']" routerLinkActive="router-link-active"><i class="far fa-handshake" style="font-size: 24px;"></i><span style="font-size: 16px;">Add Client</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/register']" routerLinkActive="router-link-active"><i class="fas fa-user-circle" style="font-size: 24px;"></i><span style="font-size: 16px;">Register</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/forgotpassword']" routerLinkActive="router-link-active"><i class="fas fa-key" style="font-size: 24px;"></i><span style="font-size: 16px;">Forgotten Password</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/searchproperty']" routerLinkActive="router-link-active"><i class="fas fa-building" style="font-size: 24px;"></i><span style="font-size: 16px;">Search Property</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/clientdetails']" routerLinkActive="router-link-active"><i class="fas fa-window-maximize" style="font-size: 24px;"></i><span style="font-size: 16px;">Client Details</span></a></li>
+        </ul>
+        <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+    </div>
+</nav>

@@ -1,0 +1,273 @@
+<body id="page-top" *ngIf=this.isAuthenticated>
+    <div id="wrapper">
+        <app-sidebar></app-sidebar>
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+
+
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3"
+                            id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown" aria-expanded="false" href="#"><i
+                                        class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu"
+                                    aria-labelledby="searchDropdown">
+                                </div>
+                            </li>
+                        </ul>
+                        <app-logout></app-logout>
+                    </div>
+                </nav>
+
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-1">Add Property</h3>
+                </div>
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-7 m-auto">
+                                <div class="p-5">
+                                    <div class="text-center border-primary">
+                                        <h4 class="text-dark mb-4">Add Property To Database</h4>
+                                        <div class="row text-center">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-left d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center .rightalign">
+                                                    Property Category :</h4>
+                                            </div>
+                                            <div class="col-6 .rightalign">
+                                                <div class="dropdown" style="margin: 5px;"><button
+                                                        class="btn btn-light dropdown-toggle" data-toggle="dropdown"
+                                                        aria-expanded="false" type="button"
+                                                        style="width: 230px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-start align-items-start">
+                                            <div class="col-6">
+                                                <h4 class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center .rightalign"
+                                                    style="filter: sepia(0%);">Sell / Rent :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Block :</h4>
+                                            </div>
+                                            <div class="col"><input type="text" style="width: 212px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    BHK Type :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Floor :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4 class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center"
+                                                    style="width: 221px;margin: 13px;">Furnished /Unfurnished :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Area :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Price :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Owner Name :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Ower Number :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="number" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Partner Name :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Property Type :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Address :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    FreeHold/ LeaseHold :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Unit Number :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Locality :</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false" type="button"
+                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h4
+                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
+                                                    Description :</h4>
+                                            </div>
+                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
+                                        </div>
+                                    </div>
+                                    <form class="user"><button class="btn btn-primary btn-block text-white btn-user"
+                                            type="submit">Add Property</button>
+                                        <hr>
+                                        <hr>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © MNR CONSULTANTS</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!-- <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+  <script src="assets/js/script.min.js"></script> -->
+</body>
