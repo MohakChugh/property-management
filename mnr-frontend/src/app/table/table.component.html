@@ -45,21 +45,21 @@
                                             <th class="text-nowrap">Delete</th>
                                         </tr>
                                     </thead>
-                                    <tbody *ngFor="let item of response">
+                                    <tbody *ngFor="let item of propertyResponse">
                                         <tr>
-                                            <td class="text-nowrap">{{ type }}</td>
-                                            <td class="text-nowrap">{{ sellRent }}</td>
-                                            <td class="text-nowrap">{{ Block }}</td>
-                                            <td class="text-nowrap">{{ Address }}</td>
-                                            <td class="text-nowrap">{{ Locality }}</td>
-                                            <td class="text-nowrap">{{ bhkType }}</td>
-                                            <td class="text-nowrap">{{ Floor }}</td>
-                                            <td class="text-nowrap">{{ Area }}</td>
-                                            <td class="text-nowrap">{{ Price }}</td>
-                                            <td>{{ OwnerName }}</td>
-                                            <td class="text-nowrap">{{ contactNumber }}</td>
-                                            <td class="text-nowrap">{{ FHLH }}</td>
-                                            <td>{{ PartnerName }}</td>
+                                            <td class="text-nowrap">{{ item.type }}</td>
+                                            <td class="text-nowrap">{{ item.sell_rent }}</td>
+                                            <td class="text-nowrap">{{ item.block }}</td>
+                                            <td class="text-nowrap">{{ item.address }}</td>
+                                            <td class="text-nowrap">{{ item.locality }}</td>
+                                            <td class="text-nowrap">{{ item.bhk_type }}</td>
+                                            <td class="text-nowrap">{{ item.floor }}</td>
+                                            <td class="text-nowrap">{{ item.area }}</td>
+                                            <td class="text-nowrap">{{ item.price }}</td>
+                                            <td>{{ item.owner_name }}</td>
+                                            <td class="text-nowrap">{{ item.contact_number }}</td>
+                                            <td class="text-nowrap">{{ item.fh_lh }}</td>
+                                            <td>{{ item.partner_name }}</td>
                                             <td class="text-nowrap"><a class="btn btn-danger btn-icon-split"
                                                     role="button"><span class="text-white-50 icon"><i
                                                             class="fas fa-trash"></i></span><span

@@ -41,6 +41,7 @@ app.get('/client', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
+    token = JSON.parse(token)
 
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
@@ -60,6 +61,7 @@ app.post('/addClient', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
+    token = JSON.parse(token)
 
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
@@ -86,6 +88,7 @@ app.post('/searchProperties', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
+    token = JSON.parse(token)
 
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
@@ -134,9 +137,12 @@ app.post('/searchProperties', async (req, res) => {
 })
 
 app.get('/properties', async (req, res) => {
+    console.log('Properties function was called!');
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
+    token = JSON.parse(token)
+    console.log(token)
 
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
@@ -167,6 +173,7 @@ app.post('/validatetoken', async (req, res) => {
     let token = headers[1]
     if (token) {
         token = JSON.parse(token)
+        console.log(`Token sent while validating is : ${token}`)
     }
 
     let validated = await authenticate.validateToken(token)
