@@ -68,11 +68,13 @@ export class TableComponent implements OnInit {
   getProperties = async () => {
     this.token = this.cookieService.get('Token');
     const headers = new HttpHeaders().set('authentication', `Bearer' ${this.token}`);
+    let props: any;
     // Fetching properties from backend
     const result = this.http.get(this.rooturl + '/properties', { headers }).subscribe(properties => {
-      console.log(properties.data.propertydata);
-      this.propertyResponse = properties.data.propertydata;
-      return properties.data;
+      props = properties;
+      console.log(props.data.propertydata);
+      this.propertyResponse = props.data.propertydata;
+      return props.data;
     });
     console.log('Trying to get properties');
     console.log(result);
