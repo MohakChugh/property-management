@@ -22,6 +22,7 @@
                     <div class="card shadow">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 font-weight-bold">Property Data</p>
+                            <p *ngIf="propertyDeleted" style="color: crimson;">Property deleted!</p>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive table mt-2" id="dataTable" role="grid"
@@ -60,7 +61,7 @@
                                             <td class="text-nowrap">{{ item.contact_number }}</td>
                                             <td class="text-nowrap">{{ item.fh_lh }}</td>
                                             <td>{{ item.partner_name }}</td>
-                                            <td class="text-nowrap"><a class="btn btn-danger btn-icon-split"
+                                            <td class="text-nowrap"><a (click)="deleteProperty(item.id)" class="btn btn-danger btn-icon-split"
                                                     role="button"><span class="text-white-50 icon"><i
                                                             class="fas fa-trash"></i></span><span
                                                         class="text-white text">Delete Entry</span></a></td>

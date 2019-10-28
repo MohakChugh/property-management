@@ -17,6 +17,8 @@ export class AddPropertyComponent implements OnInit {
   DATA = {};
   isAuthenticated = false;
 
+  isPropertyAdded = false;
+
   constructor(private cookieService: CookieService, private router: Router, private http: HttpClient) { }
 
   ngOnInit() {

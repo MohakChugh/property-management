@@ -21,28 +21,23 @@
                         <app-logout></app-logout>
                     </div>
                 </nav>
-
-                <div class="container-fluid">
-                    <h3 class="text-dark mb-1">Add Property</h3>
-                </div>
-                <div class="card shadow-lg o-hidden border-0 my-5">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-7 m-auto">
-                                <div class="p-5">
-                                    <div class="text-center border-primary">
-                                        <h4 class="text-dark mb-4">Add Property To Database</h4>
-                                        <div class="row text-center">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-left d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center .rightalign">
-                                                    Property Category :</h4>
-                                            </div>
-                                            <div class="col-6 .rightalign">
-                                                <div class="dropdown" style="margin: 5px;"><button
-                                                        class="btn btn-light dropdown-toggle" data-toggle="dropdown"
-                                                        aria-expanded="false" type="button"
-                                                        style="width: 230px;">Select&nbsp;</button>
+                <div>
+                    <div class="col">
+                        <div class="card shadow mb-3">
+                            <div class="card-header py-3">
+                                <p class="text-primary m-0 font-weight-bold">Add Property to Database</p>
+                                <a *ngIf="isPropertyAdded" class="btn btn-info btn-icon-split" role="button">
+                                    <span class="text-white text">Property Added!</span></a>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="username"><strong>Property
+                                                        Category</strong><br></label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp;</button>
                                                     <div class="dropdown-menu" role="menu"><a class="dropdown-item"
                                                             role="presentation" href="#">First Item</a><a
                                                             class="dropdown-item" role="presentation" href="#">Second
@@ -51,212 +46,174 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row justify-content-start align-items-start">
-                                            <div class="col-6">
-                                                <h4 class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center .rightalign"
-                                                    style="filter: sepia(0%);">Sell / Rent :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="email"><strong>Sell or
+                                                        Rent</strong></label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp;</button>
                                                     <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
+                                                            role="presentation" href="#">Sell</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Rent</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Block :</h4>
-                                            </div>
-                                            <div class="col"><input type="text" style="width: 212px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    BHK Type :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
-                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Floor :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
-                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4 class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center"
-                                                    style="width: 221px;margin: 13px;">Furnished /Unfurnished :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
-                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Area :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Price :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Owner Name :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Ower Number :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="number" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Partner Name :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Property Type :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
-                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Address :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    FreeHold/ LeaseHold :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
-                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Unit Number :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Locality :</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="dropdown"><button class="btn btn-light dropdown-toggle"
-                                                        data-toggle="dropdown" aria-expanded="false" type="button"
-                                                        style="width: 230px;margin: 5px;">Select&nbsp;</button>
-                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
-                                                            role="presentation" href="#">First Item</a><a
-                                                            class="dropdown-item" role="presentation" href="#">Second
-                                                            Item</a><a class="dropdown-item" role="presentation"
-                                                            href="#">Third Item</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h4
-                                                    class="text-center d-xl-flex justify-content-center align-items-center align-content-center align-self-center m-auto justify-content-xl-center align-items-xl-center">
-                                                    Description :</h4>
-                                            </div>
-                                            <div class="col-6"><input type="text" style="width: 230px;"></div>
                                         </div>
                                     </div>
-                                    <form class="user"><button class="btn btn-primary btn-block text-white btn-user"
-                                            type="submit">Add Property</button>
-                                        <hr>
-                                        <hr>
-                                    </form>
-                                </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="first_name"><strong>Block</strong><br></label><input
+                                                    class="form-control" type="number" placeholder="Block"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="last_name"><strong>BHK</strong>&nbsp;Type</label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="username"><strong>Floor</strong><br></label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp;</button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="email"><strong>Furnished or
+                                                        Unfurnished</strong><br></label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp; </button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">Furnished</a><a
+                                                            class="dropdown-item" role="presentation"
+                                                            href="#">Unfurnished</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="first_name"><strong>Area</strong><br></label><input
+                                                    class="form-control" type="number" placeholder="Area"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="last_name"><strong>Price</strong></label><input
+                                                    class="form-control" type="text" placeholder="Price Rs -"
+                                                    name="last_name"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="username"><strong>Property
+                                                        Type</strong><br></label><input class="form-control" type="text"
+                                                    placeholder="Property type" name="username"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="email"><strong>Address</strong><br></label><input
+                                                    class="form-control" type="email" placeholder="Address"
+                                                    name="email"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="first_name"><strong>Freehold or
+                                                        Leasehold</strong><br></label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp; </button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">Freehold</a><a
+                                                            class="dropdown-item" role="presentation"
+                                                            href="#">Leasehold</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="last_name"><strong>Unit
+                                                        Number</strong></label><input class="form-control" type="text"
+                                                    placeholder="Unit Number?" name="last_name"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="first_name"><strong>Locality</strong><br></label>
+                                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle"
+                                                        data-toggle="dropdown" aria-expanded="false"
+                                                        type="button">Select&nbsp; </button>
+                                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item"
+                                                            role="presentation" href="#">First Item</a><a
+                                                            class="dropdown-item" role="presentation" href="#">Second
+                                                            Item</a><a class="dropdown-item" role="presentation"
+                                                            href="#">Third Item</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label
+                                                    for="last_name"><strong>Description</strong></label><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Add extra details about property" name="last_name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group"><label for="address"><strong>Owner
+                                                Name</strong></label><input class="form-control" type="text"
+                                            placeholder="Name of the Owner of property" name="address"></div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="city"><strong>Owner
+                                                        Number</strong><br></label><input class="form-control"
+                                                    type="text" placeholder="Owner's Contact Number" name="city"></div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group"><label for="country"><strong>Partner
+                                                        Name</strong><br></label><input class="form-control" type="text"
+                                                    placeholder="Partners Name, If any" name="country"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Add
+                                            Properties</button></div>
+                                </form>
                             </div>
                         </div>
+                        <div class="card shadow"></div>
                     </div>
+
                 </div>
             </div>
             <footer class="bg-white sticky-footer">

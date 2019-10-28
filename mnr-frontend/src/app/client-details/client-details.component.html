@@ -9,7 +9,7 @@
                             id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
                         <ul class="nav navbar-nav flex-nowrap ml-auto">
                             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
-                                    data-toggle="dropdown" aria-expanded="false" href="#"><i
+                                    data-toggle="dropdown" aria-expanded="false"><i
                                         class="fas fa-search"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu"
                                     aria-labelledby="searchDropdown">
@@ -23,26 +23,34 @@
                     <h3 class="text-dark mb-1">Client Details</h3>
                 </div>
                 <div class="row">
-                    <div class="col-6" *ngFor="let item of array">
+                    <div class="col-md-4" *ngFor="let item of clientData">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="text-primary m-0 font-weight-bold">{{name}}</h6>
+                                <h6 class="text-primary m-0 font-weight-bold">{{item.Name}}</h6>
                             </div>
                             <div class="card-body border rounded">
-                                <h3>Address</h3>
-                                <p class="m-0">{{address}}</p>
+                                <h5 style="color: rgb(13, 71, 71);">Address</h5>
+                                <p class="m-0">{{item.Address}}</p>
                             </div>
                             <div class="card-body border rounded">
-                                <h3>Phone Number</h3>
-                                <p class="m-0">{{phone}}</p>
+                                <h5 style="color: rgb(13, 71, 71);">Phone Number</h5>
+                                <p class="m-0">{{item.PhoneNumber}}</p>
                             </div>
                             <div class="card-body border rounded">
-                                <h3>Email</h3>
-                                <p class="m-0">{{email}}</p>
+                                <h5 style="color: rgb(13, 71, 71);">Email</h5>
+                                <p class="m-0">{{item.Email}}</p>
                             </div>
                             <div class="card-body border rounded">
-                                <h3>Type</h3>
-                                <p class="m-0">{{type}}</p>
+                                <h5 style="color: rgb(13, 71, 71);">Type</h5>
+                                <p class="m-0">{{item.type}}</p>
+                            </div>
+                            <div class="card-body border rounded">
+                                <h5 style="color: rgb(13, 71, 71);">Occupation</h5>
+                                <p class="m-0">{{item.Occupation}}</p>
+                            </div>
+                            <div class="card-body border rounded">
+                                <h5 style="color: rgb(13, 71, 71);">Additional Details</h5>
+                                <p class="m-0">{{item.AdditionalDetails}}</p>
                             </div>
                         </div>
                     </div>

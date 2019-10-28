@@ -20,8 +20,10 @@ export class ClientDetailsComponent implements OnInit {
   url = '';
   DATA = {};
   isAuthenticated = false;
+  clientData: any;
 
   array = [1, 2, 3, 4, 5, 6, 7];
+  headers = HttpHeaders;
 
   constructor(private cookieService: CookieService, private router: Router, private http: HttpClient) { }
 
@@ -45,10 +47,24 @@ export class ClientDetailsComponent implements OnInit {
           console.log('Token was validated before entering into dashboard');
           // if isAuthenticated is true, only then load html
           this.isAuthenticated = true;
+          this.retrieveData();
         }
       });
     };
 
     requestMethod();
+  }
+
+  getClients = (headers) => {
+    return this.http.get(this.rooturl + '/client', { headers }).subscribe(result => {
+      console.log(result);
+      this.clientData = result;
+      this.clientData = this.clientData.data.clientData;
+    });
+  }
+
+  retrieveData = () => {
+    const headers = new HttpHeaders().set('authentication', `Bearer' ${this.token}`);
+    this.getClients(headers);
   }
 }

@@ -31,9 +31,10 @@ export class TableComponent implements OnInit {
   url = '';
   DATA = {};
   isAuthenticated = false;
+  propertyDeleted = false;
 
   response = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  propertyResponse: any = []
+  propertyResponse: any = [];
 
   constructor(private cookieService: CookieService, private router: Router, private http: HttpClient) {
   }
@@ -65,6 +66,10 @@ export class TableComponent implements OnInit {
     await requestMethod();
   }
 
+  // ngOnChange() {
+
+  // }
+
   getProperties = async () => {
     this.token = this.cookieService.get('Token');
     const headers = new HttpHeaders().set('authentication', `Bearer' ${this.token}`);
@@ -85,6 +90,24 @@ export class TableComponent implements OnInit {
       const property = await this.getProperties();
       console.log(`Inside show data in tables : ${property}`);
     }
+  }
+
+  deleteProperty = async (id) => {
+    console.log('Item To be deleted ' + id);
+    this.token = this.cookieService.get('Token');
+    const headers = new HttpHeaders().set('authentication', `Bearer' ${this.token}`);
+    return this.http.post(this.rooturl + '/deleteproperty', { id }, { headers }).subscribe(isDeleted => {
+      if (isDeleted === true) {
+        console.log('Successfully Deleted');
+        this.propertyDeleted = true;
+        this.showDataInTables();
+        setTimeout(() => {
+          this.propertyDeleted = false;
+        }, 3000)
+      } else {
+        console.log(`Property ${id} not deleted`);
+      }
+    });
   }
 
 }
