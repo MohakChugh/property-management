@@ -7,6 +7,7 @@ const port = process.env.PORT || 8080
 const authenticate = require('./auth/auth')
 const query = require('./hasuraApi/query')
 const insert = require('./hasuraApi/insert')
+const del = require('./hasuraApi/delete');
 
 app.use(cors())
 app.use(bodyParser.urlencoded())
@@ -57,7 +58,7 @@ app.get('/client', async (req, res) => {
     }
 })
 
-app.post('/addClient', async (req, res) => {
+app.post('/addclient', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
@@ -84,7 +85,7 @@ app.post('/addClient', async (req, res) => {
     }
 })
 
-app.post('/searchProperties', async (req, res) => {
+app.post('/searchproperties', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
@@ -185,6 +186,24 @@ app.post('/validatetoken', async (req, res) => {
         res.json({
             validate: false
         });
+    }
+})
+
+app.post('/deleteproperty', async (req, res) => {
+    let headers = req.headers.authentication
+    headers = headers.split(" ")
+    let token = headers[1]
+    token = JSON.parse(token)
+    let validated = await authenticate.validateToken(token)
+    if (validated === true) {
+        // Delete Property
+        let id = req.body.id
+        let result = del.deleteproperty(id)
+        res.send(true)
+    } else {
+        res.json({
+            authentication: false
+        })
     }
 })
 

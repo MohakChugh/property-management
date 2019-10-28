@@ -11,10 +11,9 @@ const addUser = async (email, password) => {
     const query = `mutation MyMutation {
         __typename
         insert_users(objects: {email: "${email}", password: "${password}"}) {
-          affected_rows
+            affected_rows
         }
-      }
-      `;
+    }`;
     var result = await client.request(query)
         .then(data => {
             return data;
@@ -34,10 +33,9 @@ const addclientData = async (name, email, phone, type, address, occupation, addi
     const query = `mutation MyMutation {
         __typename
         insert_clientData(objects: {AdditionalDetails: "${additional_details}", Address: "${address}", Email: "${email}", Name: "${name}", Occupation: "${occupation}", PhoneNumber: "${phone}", type: "${type}"}) {
-          affected_rows
+            affected_rows
         }
-      }
-      `;
+    }`;
     var result = await client.request(query)
         .then(data => {
             return data;
