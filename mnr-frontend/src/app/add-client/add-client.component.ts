@@ -20,7 +20,7 @@ export class AddClientComponent implements OnInit {
   additionalDetails = '';
 
   token = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   DATA = {};
   isAuthenticated = false;

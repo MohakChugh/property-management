@@ -27,7 +27,7 @@ export class TableComponent implements OnInit {
 
 
   token = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   DATA = {};
   isAuthenticated = false;
@@ -103,7 +103,7 @@ export class TableComponent implements OnInit {
         this.showDataInTables();
         setTimeout(() => {
           this.propertyDeleted = false;
-        }, 3000)
+        }, 3000);
       } else {
         console.log(`Property ${id} not deleted`);
       }

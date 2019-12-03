@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterComponent implements OnInit {
 
-  email: string = '';
-  password: string = '';
+  email = '';
+  password = '';
   repeatpassword =  '';
   firstname = '';
   lastname = '';
@@ -28,10 +28,9 @@ export class RegisterComponent implements OnInit {
       this.lastname = lastname;
       this.name = firstname + ' ' + lastname;
       console.log(this.name);
-      console.log(password); 
-      console.log(email); 
-    }
-    else {
+      console.log(password);
+      console.log(email);
+    } else {
       console.log('Password not equal to repeatpassword');
     }
   }

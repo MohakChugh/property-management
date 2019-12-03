@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { NgForm } from '@angular/forms';
-import { AuthService } from './auth.service';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -14,12 +12,11 @@ export class LoginComponent implements OnInit {
 
   email = '';
   password = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   constructor(
     private cookieService: CookieService,
     private router: Router,
-    private service: AuthService,
     private http: HttpClient,
     ) { }
 
