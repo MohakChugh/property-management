@@ -146,7 +146,6 @@ app.get('/properties', async (req, res) => {
     }
 })
 
-// TODO: Add Propertities left 
 app.post('/addproperty', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
