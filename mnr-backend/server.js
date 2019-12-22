@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 app.post('/login', async (req, res) => {
     let email = req.body.email
     let password = req.body.password
-
     let loginResult = await authenticate.authenticateUser(email, password)
     res.send(loginResult)
 })
@@ -30,10 +29,6 @@ app.post('/login', async (req, res) => {
 app.post('/signup', async (req, res) => {
     let email = req.body.email
     let password = req.body.password
-
-    console.log(email)
-    console.log(password)
-
     let registerResult = await authenticate.registerUser(email, password)
     res.send(registerResult)
 })
@@ -43,7 +38,6 @@ app.get('/client', async (req, res) => {
     headers = headers.split(" ")
     let token = headers[1]
     token = JSON.parse(token)
-
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
         let clientData = await query.getClient()
@@ -63,7 +57,6 @@ app.post('/addclient', async (req, res) => {
     headers = headers.split(" ")
     let token = headers[1]
     token = JSON.parse(token)
-
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
         let name = req.body.name
@@ -90,10 +83,8 @@ app.post('/searchproperties', async (req, res) => {
     headers = headers.split(" ")
     let token = headers[1]
     token = JSON.parse(token)
-
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
-
         // All blank fields should be send like : 
         // "property" : ""
         let property = req.body.property
@@ -108,7 +99,6 @@ app.post('/searchproperties', async (req, res) => {
         let floor = req.body.floor
         let priceFrom = req.body.priceFrom
         let priceTo = req.body.priceTo
-
         let arr1 = [property, fh_lh, locality, bhk, property_type, isFurnished, area, isSale, block, floor, priceFrom, priceTo]
         let arr2 = ["property", "fh_lh", "locality", "bhk_type", "type", "isFurnished", "area", "sell_rent", "block", "floor", "priceFrom", "priceTo"]
 
@@ -138,13 +128,10 @@ app.post('/searchproperties', async (req, res) => {
 })
 
 app.get('/properties', async (req, res) => {
-    console.log('Properties function was called!');
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
     token = JSON.parse(token)
-    console.log(token)
-
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
         let propertyData = await query.getProperty()
@@ -164,31 +151,27 @@ app.post('/addproperty', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
-    token = JSON.parse(token)
-
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
-        // 
-        let propertyCategory    =req.body.propertyCategory;
-        let sellRent            =req.body.sellRent;
-        let block               =req.body.block;
-        let bhk                 =req.body.bhk;
-        let floor               =req.body.floor;
-        let furnishedUnfurnished=req.body.furnishedUnfurnished;
-        let area                =req.body.area;
-        let price               =req.body.price;
-        let PropertyType        =req.body.PropertyType;
-        let address             =req.body.address;
-        let fhLh                =req.body.fhLh;
-        let unitNumber          =req.body.unitNumber;
-        let locality            =req.body.locality;
-        let description         =req.body.description;
-        let ownerName           =req.body.ownerName;
-        let ownerNumber         =req.body.ownerNumber;
-        let partnerName         =req.body.partnerName;
-        let insertResult = await insert.addproperty(PropertyType,sellRent, price, partnerName, ownerName, locality, furnishedUnfurnished, floor, fhLh, ownerNumber, block, bhk, area, address, propertyCategory, unitNumber, description)
+        let propertyCategory = req.body.propertyCategory
+        let sellRent = req.body.sellRent
+        let block = req.body.block
+        let bhk = req.body.bhk
+        let floor = req.body.floor
+        let furnishedUnfurnished = req.body.furnishedUnfurnished
+        let area = req.body.area
+        let price = req.body.price
+        let PropertyType = req.body.PropertyType
+        let address = req.body.address
+        let fhLh = req.body.fhLh
+        let unitNumber = req.body.unitNumber
+        let locality = req.body.locality
+        let description = req.body.description
+        let ownerName = req.body.ownerName
+        let ownerNumber = req.body.ownerNumber
+        let partnerName = req.body.partnerName
+        await insert.addproperty(PropertyType,sellRent, price, partnerName, ownerName, locality, furnishedUnfurnished, floor, fhLh, ownerNumber, block, bhk, area, address, propertyCategory, unitNumber, description)
         .then((result) => {
-            console.log(result)
             res.send(result);
         }).catch((err) => {
             console.log(err);
