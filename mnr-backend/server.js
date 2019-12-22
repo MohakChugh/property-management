@@ -151,6 +151,7 @@ app.post('/addproperty', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
+    token = JSON.parse(token)
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
         let propertyCategory = req.body.propertyCategory
@@ -191,6 +192,8 @@ app.post('/validatetoken', async (req, res) => {
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
+    token = JSON.parse(token)
+
     if (token) {
         token = JSON.parse(token)
         console.log(`Token sent while validating is : ${token}`)
