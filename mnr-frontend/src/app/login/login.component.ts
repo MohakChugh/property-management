@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   password = '';
   rooturl = 'http://localhost:8080';
   url = '';
+  loading = false;
+  error = false;
   constructor(
     private cookieService: CookieService,
     private router: Router,
@@ -26,6 +28,13 @@ export class LoginComponent implements OnInit {
   requestmethod(url: string, DATA: any) {
     return this.http.post(this.rooturl + url, DATA, {responseType: 'text'}).subscribe(token => {
       console.log(token);
+      this.loading = false;
+      if(this.loading === false){
+        this.error = true;
+        setTimeout(() => {
+          this.error = false;
+        }, 5000);
+      }
       if (token !== 'false') {
         const authenticated = JSON.stringify(token);
         this.cookieService.set('Token', authenticated);
@@ -47,6 +56,7 @@ export class LoginComponent implements OnInit {
       email : this.email,
       password : this.password
     };
+    this.loading = true;
     const res = this.requestmethod('/login', DATA);
   }
 }

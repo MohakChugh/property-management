@@ -21,6 +21,10 @@
                                       <div class="form-group">
                                       </div>
                                       <button class="btn btn-primary btn-block text-white btn-user" type="submit" (click)='getemailpassword(email,password)'>Login</button></form>
+                                      <div>
+                                        <p *ngIf="loading" class="text-dark mb-4" style="text-align: center;">LOADING! PLEASE WAIT</p>
+                                        <h6 *ngIf="error" style="text-align: center;" style="color: brown;">USERNAME OR PASSWORD WAS WRONG! TRY AGAIN</h6>
+                                      </div>
                                   <div class="text-center"><a class="small" [routerLink]="['/forgotpassword']" routerLinkActive="router-link-active">Forgot Password?</a></div>
                                   <div class="text-center"><a class="small" [routerLink]="['/register']" routerLinkActive="router-link-active">Create an Account!</a></div>
                               </div>
