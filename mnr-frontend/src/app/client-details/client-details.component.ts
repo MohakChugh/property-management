@@ -16,7 +16,7 @@ export class ClientDetailsComponent implements OnInit {
   name = 'mohak chugh';
 
   token = '';
-  rooturl = 'https://mnr-backend.herokuapp.com';
+  rooturl = 'http://localhost:8080';
   url = '';
   DATA = {};
   isAuthenticated = false;

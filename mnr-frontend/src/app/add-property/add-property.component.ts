@@ -12,7 +12,7 @@ import { CookieService } from 'ngx-cookie-service';
 export class AddPropertyComponent implements OnInit {
 
   token = '';
-  rooturl = 'https://mnr-backend.herokuapp.com';
+  rooturl = 'http://localhost:8080';
   url = '';
   DATA = {};
   isAuthenticated = false;

@@ -194,7 +194,7 @@ app.post('/validatetoken', async (req, res) => {
     token = JSON.parse(token)
 
     if (token) {
-        token = JSON.parse(token)
+        // token = JSON.parse(token)
         console.log(`Token sent while validating is : ${token}`)
     }
 
