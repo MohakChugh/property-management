@@ -25,7 +25,7 @@ export class SearchPropertyComponent implements OnInit {
   priceto = ' ';
   showTables = false;
   token = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   DATA = {};
   isAuthenticated = false;

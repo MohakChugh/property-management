@@ -11,7 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class DashboardComponent implements OnInit {
   token = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   DATA = {};
   isAuthenticated = false;

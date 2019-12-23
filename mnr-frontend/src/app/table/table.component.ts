@@ -27,7 +27,7 @@ export class TableComponent implements OnInit {
 
 
   token = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   DATA = {};
   isAuthenticated = false;

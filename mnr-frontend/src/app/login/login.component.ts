@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   email = '';
   password = '';
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   url = '';
   loading = false;
   error = false;

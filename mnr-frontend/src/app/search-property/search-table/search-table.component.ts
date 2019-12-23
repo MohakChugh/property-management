@@ -12,7 +12,7 @@ export class SearchTableComponent implements OnInit {
   
   token = '';
   DATA = {};
-  rooturl = 'http://localhost:8080';
+  rooturl = 'https://mnr-backend.herokuapp.com';
   resultantData: any;
   constructor(
     private data: TableQueryService,
