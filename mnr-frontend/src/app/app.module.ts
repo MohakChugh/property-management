@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { CookieService } from 'ngx-cookie-service';
+import { SearchTableComponent } from './search-property/search-table/search-table.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CookieService } from 'ngx-cookie-service';
     SearchPropertyComponent,
     TableComponent,
     SidebarComponent,
-    LogoutComponent
+    LogoutComponent,
+    SearchTableComponent
   ],
   imports: [
     BrowserModule,

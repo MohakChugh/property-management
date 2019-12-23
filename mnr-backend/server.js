@@ -79,10 +79,17 @@ app.post('/addclient', async (req, res) => {
 })
 
 app.post('/searchproperties', async (req, res) => {
+    console.log('searchProperty called')
+
+
     let headers = req.headers.authentication
     headers = headers.split(" ")
     let token = headers[1]
     token = JSON.parse(token)
+
+    console.log(token)
+
+
     let validated = await authenticate.validateToken(token)
     if (validated === true) {
         // All blank fields should be send like : 
@@ -101,7 +108,7 @@ app.post('/searchproperties', async (req, res) => {
         let priceTo = req.body.priceTo
         let arr1 = [property, fh_lh, locality, bhk, property_type, isFurnished, area, isSale, block, floor, priceFrom, priceTo]
         let arr2 = ["property", "fh_lh", "locality", "bhk_type", "type", "isFurnished", "area", "sell_rent", "block", "floor", "priceFrom", "priceTo"]
-
+        console.log(arr1)
         // Build a Where Clause
         // Algorithm for Building a search clause
         /*

@@ -1,0 +1,353 @@
+<div class="card shadow">
+    <div class="card-header py-3">
+        <p class="text-primary m-0 font-weight-bold">Property Data</p>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+            <table class="table dataTable my-0" id="dataTable">
+                <thead>
+                    <tr>
+                        <th class="text-nowrap">Type</th>
+                        <th class="text-nowrap">Sell / Rent</th>
+                        <th class="text-nowrap">Block</th>
+                        <th class="text-nowrap">Address</th>
+                        <th class="text-nowrap">Locality</th>
+                        <th class="text-nowrap">BHK type</th>
+                        <th class="text-nowrap">Floor</th>
+                        <th class="text-nowrap">Area</th>
+                        <th class="text-nowrap">Price</th>
+                        <th class="text-nowrap">Owner Name</th>
+                        <th class="text-nowrap">Contact Number</th>
+                        <th>FH/LH</th>
+                        <th class="text-nowrap">Partner Name</th>
+                        <th class="text-nowrap">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let values of resultantData">
+                        <td class="text-nowrap">Residential Builder</td>
+                        <td class="text-nowrap">Sell</td>
+                        <td class="text-nowrap">K-I/9</td>
+                        <td class="text-nowrap">K-I/9</td>
+                        <td class="text-nowrap">CR Park</td>
+                        <td class="text-nowrap">2 BHk</td>
+                        <td class="text-nowrap">Second</td>
+                        <td class="text-nowrap">125 Yards</td>
+                        <td class="text-nowrap">1 Crore</td>
+                        <td>Tripathi</td>
+                        <td class="text-nowrap">9810178257</td>
+                        <td class="text-nowrap">FH</td>
+                        <td>Mr. Kumar</td>
+                        <td class="text-nowrap"><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr>
+                    <tr>
+                        <td>Residential Builder</td>
+                        <td>Sell</td>
+                        <td>K-I/9</td>
+                        <td>K-I/9</td>
+                        <td>CR Park</td>
+                        <td>2 BHk</td>
+                        <td>Second</td>
+                        <td>125 Yards</td>
+                        <td>1 Crore</td>
+                        <td>Tripathi</td>
+                        <td>9810178257</td>
+                        <td>FH</td>
+                        <td>Mr. Kumar</td>
+                        <td><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span><span class="text-white text">Delete Entry</span></a></td>
+                    </tr> -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Type</strong></td>
+                        <td><strong>Sell / Rent</strong></td>
+                        <td><strong>Block</strong></td>
+                        <td><strong>Address</strong></td>
+                        <td><strong>Locality</strong></td>
+                        <td><strong>BHK type</strong></td>
+                        <td><strong>Floor</strong></td>
+                        <td><strong>Area</strong></td>
+                        <td><strong>Price</strong></td>
+                        <td><strong>Owner Name</strong></td>
+                        <td><strong>Contact Number</strong></td>
+                        <td><strong>FH/LH</strong></td>
+                        <td><strong>Partner Name</strong></td>
+                        <td><strong>Delete</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

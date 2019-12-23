@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { TableQueryService } from './table-query.service';
 
 
 @Component({
@@ -22,14 +23,19 @@ export class SearchPropertyComponent implements OnInit {
   floor = ' ';
   pricefrom = ' ';
   priceto = ' ';
-
+  showTables = false;
   token = '';
   rooturl = 'http://localhost:8080';
   url = '';
   DATA = {};
   isAuthenticated = false;
 
-  constructor(private cookieService: CookieService, private router: Router, private http: HttpClient) { }
+  constructor(
+    private cookieService: CookieService, 
+    private router: Router, 
+    private http: HttpClient, 
+    private data: TableQueryService
+    ) { }
 
   ngOnInit() {
     // Get token from the cookie
@@ -84,5 +90,22 @@ export class SearchPropertyComponent implements OnInit {
     console.log(floor);
     console.log(pricefrom);
     console.log(priceto);
+
+    this.DATA = {
+      property,
+      fl,
+      phone, 
+      bhktype, 
+      propertytype, 
+      furnished, 
+      area, 
+      sale, 
+      block, 
+      floor, 
+      pricefrom, 
+      priceto
+    }
+    this.showTables = true;
+    this.data.addData(this.DATA);
   }
 }
