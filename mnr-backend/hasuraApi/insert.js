@@ -58,12 +58,12 @@ const addproperty = async (type, sell_rent, price, partner_name, owner_name, loc
         contact_number: "${contact_number}", description: "${description}", fh_lh: "${fh_lh}", floor: "${floor}", isFurnished: "${isFurnished}", 
         locality: "${locality}", owner_name: "${owner_name}", partner_name: "${partner_name}", price: "${price}", propertyCategory: "${propertyCategory}", 
         sell_rent: "${sell_rent}", type: "${type}", unitNumber: "${unitNumber}"}) {
-          affected_rows
-          returning {
-            id
-          }
+            affected_rows
+            returning {
+                id
+            }
         }
-      }`;
+    }`;
     var result = await client.request(query)
         .then(data => {
             return data;
