@@ -18,7 +18,7 @@
     "express": "^4.17.1",
     "graphql-request": "^1.8.2",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "pm2": "^4.1.2",
     "validator": "^11.1.0"
   }
